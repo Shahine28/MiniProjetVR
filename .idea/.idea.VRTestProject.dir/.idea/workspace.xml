@@ -8,8 +8,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e302028c-d335-4de1-a093-4bd961b730ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRTestProject.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/VRTestProject.uproject" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRAudioController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRAudioManagerSubsystem.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRLatchingButton.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRMechanicBase.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRMomentaryButton.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRRotaryKnob.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRToggleSwitch.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRAudioController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRAudioManagerSubsystem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRLatchingButton.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRMechanicBase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRMomentaryButton.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRRotaryKnob.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRToggleSwitch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRTestProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRTestProject.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Radio/Cassete.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Radio/Cassete_A.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/VRTemplate/Maps/VRTemplateMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/VRTemplate/Maps/VRTemplateMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Private/AudioManager.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Public/AudioManager.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +42,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRAudioController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRAudioManagerSubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRLatchingButton.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRMechanicBase.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRMomentaryButton.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRRotaryKnob.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Private/VRMechanic/VRToggleSwitch.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRAudioController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRAudioManagerSubsystem.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRLatchingButton.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRMechanicBase.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRMomentaryButton.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRRotaryKnob.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRToggleSwitch.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
   </component>
@@ -33,23 +71,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Uproject.VRTestProject.executor": "Run",
-    "git-widget-placeholder": "Sound",
-    "last_opened_file_path": "C:/App/Unreal/UnrealProject/MiniProjetVR/VRTestProject.uproject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Uproject.VRTestProject.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sound&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/App/Unreal/UnrealProject/MiniProjetVR/VRTestProject.uproject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
+    <configuration default="true" type="GODOT_DEBUG_RUN_CONFIGURATION" factoryName="Start and Debug">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VRTestProject" type="Uproject" factoryName="rider.uproject">
       <configuration_1 setup="1">
         <option name="CONFIGURATION" value="DebugGame Editor" />
@@ -135,6 +187,7 @@
       <workItem from="1767724426725" duration="15000" />
       <workItem from="1767725065704" duration="20000" />
       <workItem from="1767725098784" duration="1226000" />
+      <workItem from="1767736532411" duration="5248000" />
     </task>
     <servers />
   </component>
