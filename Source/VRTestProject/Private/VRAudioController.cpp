@@ -2,6 +2,7 @@
 
 #include "VRAudioManagerSubsystem.h"
 #include "Components/AudioComponent.h"
+#include "Data/ImpactAudioData.h"
 #include "Kismet/GameplayStatics.h"
 
 
@@ -22,9 +23,10 @@ void UVRAudioController::BeginPlay()
         LoopingAudioComp->RegisterComponent();
         
         if (VRAttenuation)
-        {
             LoopingAudioComp->AttenuationSettings = VRAttenuation;
-        }
+
+        if (ImpactAudioConfig)
+            Owner->OnActorHit.AddDynamic(this, &UVRAudioController::OnOwnerHit);
     }
 
     if (UWorld* World = GetWorld())
@@ -34,6 +36,7 @@ void UVRAudioController::BeginPlay()
             AudioSys->RegisterController(this);
         }
     }
+    
 }
 
 void UVRAudioController::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -106,5 +109,34 @@ void UVRAudioController::SetVolumeMultiplier(float Multiplier)
     if (LoopingAudioComp)
     {
         LoopingAudioComp->SetVolumeMultiplier(Multiplier);
+    }
+}
+
+void UVRAudioController::OnOwnerHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit)
+{
+    if (!ImpactAudioConfig)
+        return;
+
+    float ImpactForce = NormalImpulse.Size();
+    if (ImpactForce < ImpactAudioConfig->MinVelocityToPlay)
+        return;
+
+    UPhysicalMaterial* HitPhysMat = Hit.PhysMaterial.Get();
+    USoundBase* SoundToPlay = ImpactAudioConfig->GetSoundForSurface(HitPhysMat);
+    
+    if (SoundToPlay)
+    {
+        float DynamicVolume = FMath::Clamp(ImpactForce / 1000.0f, 0.1f, 1.0f);
+        DynamicVolume *= ImpactAudioConfig->VolumeMultiplier;
+        
+        UGameplayStatics::PlaySoundAtLocation(
+            this,
+            SoundToPlay,
+            GetOwner()->GetActorLocation(),
+            DynamicVolume,
+            FMath::RandRange(0.9f, 1.1f),
+            0.0f,
+            VRAttenuation
+        );
     }
 }

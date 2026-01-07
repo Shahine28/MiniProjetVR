@@ -4,6 +4,8 @@
 #include "Sound/SoundAttenuation.h"
 #include "VRAudioController.generated.h"
 
+class UImpactAudioData;
+
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class VRTESTPROJECT_API UVRAudioController : public UActorComponent
@@ -21,8 +23,14 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "VR Audio Setup")
 	USoundAttenuation* VRAttenuation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "VR Audio Physics")
+	UImpactAudioData* ImpactAudioConfig;
+
 	UPROPERTY()
 	UAudioComponent* LoopingAudioComp;
+
+	UFUNCTION()
+	void OnOwnerHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
 
 public:	
 	
