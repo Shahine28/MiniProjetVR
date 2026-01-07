@@ -8,17 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e302028c-d335-4de1-a093-4bd961b730ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRTestProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRTestProject.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/VRTemplate/Maps/VRTemplateMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/VRTemplate/Maps/VRTemplateMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox/BoomBox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox/BoomBox.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox/Cassette.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox/Cassette.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox/CassetteSlotComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Private/BoomBox/CassetteSlotComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox/BoomBox.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox/BoomBox.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox/Cassette.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox/Cassette.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox/CassetteSlotComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/BoomBox/CassetteSlotComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Public/Data/ImpactAudioData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/Data/ImpactAudioData.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRToggleSwitch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/Public/VRMechanic/VRToggleSwitch.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/VRTestProject/VRTestProject.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/VRTestProject/VRTestProject.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BoomBox/BP_CassetteTest.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BoomBox/BP_CassetteTest.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +195,7 @@
       <workItem from="1767725098784" duration="1226000" />
       <workItem from="1767736532411" duration="5248000" />
       <workItem from="1767778503077" duration="3020000" />
-      <workItem from="1767781576547" duration="2193000" />
+      <workItem from="1767781576547" duration="2396000" />
     </task>
     <servers />
   </component>
