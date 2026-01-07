@@ -1,5 +1,6 @@
-#include "BoomBox.h"
+#include "BoomBox/BoomBox.h"
 
+#include "BoomBox/CassetteSlotComponent.h"
 #include "VRMechanic/VRLatchingButton.h"
 #include "VRMechanic/VRMomentaryButton.h"
 #include "VRMechanic/VRRotaryKnob.h"
@@ -25,11 +26,17 @@ ABoomBox::ABoomBox()
 	ButtonStop = CreateDefaultSubobject<UVRMomentaryButton>(TEXT("Btn_Stop"));
 	ButtonStop->SetupAttachment(RootComponent);
 
+	// Power
 	PowerSwitch = CreateDefaultSubobject<UVRToggleSwitch>(TEXT("PowerSwitch"));
 	PowerSwitch->SetupAttachment(RootComponent);
 
+	// Volume
 	VolumeKnob = CreateDefaultSubobject<UVRRotaryKnob>(TEXT("VolumeKnob"));
 	VolumeKnob->SetupAttachment(RootComponent);
+
+	// Cassette
+	CassetteSlot = CreateDefaultSubobject<UCassetteSlotComponent>(TEXT("CassetteSlot"));
+	CassetteSlot->SetupAttachment(MeshComp);
 
 	AudioController = CreateDefaultSubobject<UVRAudioController>(TEXT("AudioController"));
 	
@@ -55,11 +62,9 @@ void ABoomBox::BeginPlay()
 
 	if (VolumeKnob)
 		VolumeKnob->OnValueChanged.AddDynamic(this, &ABoomBox::OnVolumeChanged);
-}
 
-void ABoomBox::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
+	if (CassetteSlot)
+		CassetteSlot->OnCassetteLoaded.AddDynamic(this, &ABoomBox::OnCassetteChanged);
 }
 
 // Bouton POWER
@@ -98,15 +103,26 @@ void ABoomBox::OnPlayStateChanged(float NewValue)
 	{
 		AudioController->PlayOneShot(ClickSound);
 		
-		if (CurrentState == ERadioState::Paused)
+		USoundBase* TapeMusic = CassetteSlot->GetCurrentMusic();
+		if (TapeMusic)
 		{
-			AudioController->SetPaused(false);
+			if (CurrentState == ERadioState::Paused)
+			{
+				AudioController->SetPaused(false);
+			}
+			else
+			{
+				AudioController->StartLoop(TapeMusic, 0.5f);
+			}
+			
+			CurrentState = ERadioState::Playing;
 		}
 		else
 		{
-			AudioController->StartLoop(MusicSound, 0.5f);
+
+			// AudioController->StartLoop(EmptyMotorSound);
+			UE_LOG(LogTemp, Warning, TEXT("Aucune cassette insérée !"));
 		}
-		CurrentState = ERadioState::Playing;
 	}
 	else
 	{
@@ -171,6 +187,11 @@ void ABoomBox::OnStopPressed(float NewValue)
 		bSomethingPopped = true;
 	}
 
+	if (!bSomethingPopped && CurrentState == ERadioState::Stopped)
+	{
+		CassetteSlot->EjectCassette();
+	}
+
 	if (!bSomethingPopped)
 	{
 		AudioController->StopLoop(0.1f);
@@ -178,10 +199,26 @@ void ABoomBox::OnStopPressed(float NewValue)
 	}
 }
 
+// Volume
 void ABoomBox::OnVolumeChanged(float NewVolume)
 {
 	if (AudioController)
 	{
 		AudioController->SetVolumeMultiplier(NewVolume);
+	}
+}
+
+void ABoomBox::OnCassetteChanged(USoundBase* NewMusic)
+{
+	if (NewMusic == nullptr && CurrentState == ERadioState::Playing)
+	{
+		// On arrête tout brutalement (ou avec un son de scratch !)
+		AudioController->StopLoop(0.1f);
+        
+		if (ButtonPlay && ButtonPlay->IsPressed())
+		{
+			ButtonPlay->ReleaseButton();
+		}
+		CurrentState = ERadioState::Stopped;
 	}
 }

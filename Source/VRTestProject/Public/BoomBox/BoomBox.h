@@ -4,6 +4,7 @@
 #include "GameFramework/Actor.h"
 #include "BoomBox.generated.h"
 
+class UCassetteSlotComponent;
 class UVRToggleSwitch;
 class UVRRotaryKnob;
 class UVRMomentaryButton;
@@ -48,11 +49,17 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Controls")
 	UVRMomentaryButton* ButtonStop;
 
+	// Power
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Controls")
 	UVRToggleSwitch* PowerSwitch;
 
+	//Volume
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Controls")
 	UVRRotaryKnob* VolumeKnob;
+
+	// Cassette
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UCassetteSlotComponent* CassetteSlot;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Audio")
 	UVRAudioController* AudioController;
@@ -71,6 +78,7 @@ protected:
 	bool bIsOn;
 
 public:
+	// Bouton Power
 	UFUNCTION(BlueprintCallable)
 	void OnPowerSwitchChanged(float NewValue);
 
@@ -86,6 +94,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void OnStopPressed(float NewValue);
 
+	// Roue Volume
 	UFUNCTION()
 	void OnVolumeChanged(float NewVolume);
+
+	// Cassette
+	UFUNCTION()
+	void OnCassetteChanged(USoundBase* NewMusic);
 };
