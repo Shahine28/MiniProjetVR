@@ -21,6 +21,15 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "VR Interaction")
 	USceneComponent* InteractingHand;
 
+	UFUNCTION(BlueprintCallable, Category = "VR Interaction")
+	virtual void StartInteraction(USceneComponent* HandComp);
+
+	UFUNCTION(BlueprintCallable, Category = "VR Interaction")
+	virtual void StopInteraction();
+
+	UFUNCTION(BlueprintCallable, Category = "VR Interaction")
+	void PlayHapticFeedback(USceneComponent* HandComp, float IntensityScale = 1.0f);
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -28,10 +37,6 @@ protected:
 
 	float CurrentValue;
 
-public:
-	UFUNCTION(BlueprintCallable, Category = "VR Interaction")
-	virtual void StartInteraction(USceneComponent* HandComp);
-
-	UFUNCTION(BlueprintCallable, Category = "VR Interaction")
-	virtual void StopInteraction();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Settings")
+	UHapticFeedbackEffect_Base* HapticEffect;
 };

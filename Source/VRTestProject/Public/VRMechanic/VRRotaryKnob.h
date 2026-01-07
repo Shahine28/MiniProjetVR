@@ -23,5 +23,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Settings")
 	float MaxAngle = 135.0f;
 
+	UPROPERTY(EditAnywhere, Category = "Settings")
+	float HapticInterval = 0.1f;
+
+	float LastHapticValue;
+
 	float CurrentRotationAngle;
 };

@@ -22,11 +22,9 @@ void UVRRotaryKnob::UpdateInteraction(FVector HandLocation)
 	
 	float RawAngle = FMath::RadiansToDegrees(FMath::Atan2(LocalHandPos.Z, LocalHandPos.Y));
 	float ClampedAngle = FMath::Clamp(RawAngle, MinAngle, MaxAngle);
-
-
+	
 	SetRelativeRotation(FRotator(ClampedAngle, 0, 0));
-
-
+	
 	float Range = MaxAngle - MinAngle;
 	float NewValue = (ClampedAngle - MinAngle) / Range;
 
@@ -34,5 +32,11 @@ void UVRRotaryKnob::UpdateInteraction(FVector HandLocation)
 	{
 		CurrentValue = NewValue;
 		OnValueChanged.Broadcast(CurrentValue);
+
+		if (FMath::Abs(CurrentValue - LastHapticValue) >= HapticInterval)
+		{
+			PlayHapticFeedback(InteractingHand, 0.6f);
+			LastHapticValue = CurrentValue;
+		}
 	}
 }

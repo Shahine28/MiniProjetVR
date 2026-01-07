@@ -40,6 +40,8 @@ void UVRLatchingButton::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAct
 	{
 		FVector DepthVector = FVector(0, 0, PressDepth); 
 		TargetLocation = InitialLocalLocation + DepthVector;
+
+		PlayHapticFeedback(Cast<USceneComponent>(OtherComp), 1.0f);
 	}
 	else
 	{
