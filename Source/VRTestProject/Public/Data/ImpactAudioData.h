@@ -23,16 +23,16 @@ class VRTESTPROJECT_API UImpactAudioData : public UDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere, Category = "Impacts")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	USoundBase* DefaultImpactSound;
 
-	UPROPERTY(EditAnywhere, Category = "Impacts")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	float MinVelocityToPlay = 50.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Impacts")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	float VolumeMultiplier = 1.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Impacts")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	TArray<FSurfaceSoundPair> SurfaceSounds;
 
 	USoundBase* GetSoundForSurface(UPhysicalMaterial* Surface) const

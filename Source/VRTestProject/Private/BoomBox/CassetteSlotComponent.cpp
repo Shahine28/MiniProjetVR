@@ -64,3 +64,11 @@ USoundBase* UCassetteSlotComponent::GetCurrentMusic() const
 	
 	return nullptr;
 }
+
+ACassette* UCassetteSlotComponent::GetCurrentCassette()
+{
+	if (CurrentCassette)
+		return CurrentCassette;
+
+	return nullptr;
+}

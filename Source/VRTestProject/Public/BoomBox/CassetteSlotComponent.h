@@ -34,8 +34,12 @@ public:
 	FOnCassetteChanged OnCassetteLoaded;
 
 	bool HasCassette() const { return CurrentCassette != nullptr; }
-	
+
+	UFUNCTION(BlueprintCallable, Category = "Cassette System")
 	USoundBase* GetCurrentMusic() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Cassette System")
+	ACassette* GetCurrentCassette();
 
 	UFUNCTION(BlueprintCallable, Category = "Cassette System")
 	void EjectCassette();

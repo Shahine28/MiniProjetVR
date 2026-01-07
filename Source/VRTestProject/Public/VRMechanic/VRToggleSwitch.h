@@ -18,13 +18,13 @@ protected:
 	
 	virtual void UpdateInteraction(FVector HandLocation) override {};
 	
-	UPROPERTY(EditAnywhere, Category = "VR Switch")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	float OffAngle = -20.0f;
 
-	UPROPERTY(EditAnywhere, Category = "VR Switch")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	float OnAngle = 20.0f;
 
-	UPROPERTY(EditAnywhere, Category = "VR Switch")
+	UPROPERTY(EditAnywhere, Category = "Settings")
 	float SwitchSpeed = 15.0f;
 
 	FRotator InitialRotation;

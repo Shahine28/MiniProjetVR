@@ -29,7 +29,6 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
 
 protected:
 	// ====== Components ======
@@ -66,13 +65,16 @@ protected:
 
 	// ====== Settings ======
 
-	UPROPERTY(EditAnywhere, Category = "Audio Content")
+	UPROPERTY(EditAnywhere, Category = "Settings|Audio Content")
 	USoundBase* MusicSound;
 
-	UPROPERTY(EditAnywhere, Category = "Audio Content")
+	UPROPERTY(EditAnywhere, Category = "Settings|Audio Content")
 	USoundBase* ClickSound;
 
-	UPROPERTY(BlueprintReadOnly, Category = "State")
+	UPROPERTY(EditAnywhere, Category = "Settings|Audio Content")
+	USoundBase* DirtyStaticSound;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Settings|State")
 	ERadioState CurrentState;
 
 	bool bIsOn;

@@ -8,7 +8,19 @@ public class VRTestProject : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] 
+		{
+			"Core", 
+			"CoreUObject", 
+			"Engine", 
+			"InputCore",
+			"HeadMountedDisplay",
+			"EnhancedInput",
+			"AudioCapture",
+			"AudioMixer",
+			"Niagara",
+			"PhysicsCore"
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

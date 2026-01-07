@@ -97,41 +97,55 @@ void ABoomBox::OnPlayStateChanged(float NewValue)
 	if (!bIsOn)
 		return; 
 
-	bool bIsDown = NewValue > 0.5f;
+    bool bIsDown = NewValue > 0.5f;
 
-	if (bIsDown)
-	{
-		AudioController->PlayOneShot(ClickSound);
-		
-		USoundBase* TapeMusic = CassetteSlot->GetCurrentMusic();
-		if (TapeMusic)
-		{
-			if (CurrentState == ERadioState::Paused)
-			{
-				AudioController->SetPaused(false);
-			}
-			else
-			{
-				AudioController->StartLoop(TapeMusic, 0.5f);
-			}
-			
-			CurrentState = ERadioState::Playing;
-		}
-		else
-		{
+    if (bIsDown)
+    {
+        AudioController->PlayOneShot(ClickSound);
+    	
+        ACassette* Tape = CassetteSlot->GetCurrentCassette();
+        if (Tape)
+        {
+            if (Tape->IsClean())
+            {
+                USoundBase* Music = Tape->GetMusic();
 
-			// AudioController->StartLoop(EmptyMotorSound);
-			UE_LOG(LogTemp, Warning, TEXT("Aucune cassette insérée !"));
-		}
-	}
-	else
-	{
-		if (CurrentState != ERadioState::Stopped)
-		{
-			AudioController->StopLoop(0.2f);
-			CurrentState = ERadioState::Stopped;
-		}
-	}
+                if (CurrentState == ERadioState::Paused)
+                {
+                    AudioController->SetPaused(false);
+                }
+                else
+                {
+                    AudioController->StartLoop(Music, 0.5f);
+                }
+            }
+            else
+            {
+                if (DirtyStaticSound)
+                {
+                    AudioController->StartLoop(DirtyStaticSound, 0.5f);
+                }
+                else
+                {
+                    AudioController->StopLoop(0.1f);
+                }
+            }
+            
+            CurrentState = ERadioState::Playing;
+        }
+        else
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Aucune cassette insérée !"));
+        }
+    }
+    else
+    {
+        if (CurrentState != ERadioState::Stopped)
+        {
+            AudioController->StopLoop(0.2f);
+            CurrentState = ERadioState::Stopped;
+        }
+    }
 }
 
 // Bouton PAUSE
