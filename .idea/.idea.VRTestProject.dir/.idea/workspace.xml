@@ -8,7 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e302028c-d335-4de1-a093-4bd961b730ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BoomBox/BP_CassetteTest.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BoomBox/BP_CassetteTest.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRTestProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRTestProject.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRTestProject.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/VRTestProject.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,93 +73,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="GODOT_DEBUG_RUN_CONFIGURATION" factoryName="Start and Debug">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
-      <option name="MIXED_MODE_DEBUG" value="0" />
-      <method v="2">
-        <option name="Build Solution" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VRTestProject" type="Uproject" factoryName="rider.uproject">
-      <configuration_1 setup="1">
-        <option name="CONFIGURATION" value="DebugGame Editor" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/../../Versions/UE_5.6/Engine/Binaries/Win64/UnrealEditor-Win64-DebugGame.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\App\Unreal\UnrealProject\MiniProjetVR\VRTestProject.uproject&quot;" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="C:\App\Unreal\Versions\UE_5.6" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="1" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      </configuration_1>
-      <configuration_2 setup="1">
-        <option name="CONFIGURATION" value="DebugGame" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/VRTestProject-Win64-DebugGame.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="C:\App\Unreal\Versions\UE_5.6" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="1" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      </configuration_2>
-      <configuration_3 setup="1">
-        <option name="CONFIGURATION" value="Development Editor" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/../../Versions/UE_5.6/Engine/Binaries/Win64/UnrealEditor.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\App\Unreal\UnrealProject\MiniProjetVR\VRTestProject.uproject&quot;" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="C:\App\Unreal\Versions\UE_5.6" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="1" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      </configuration_3>
-      <configuration_4 setup="1">
-        <option name="CONFIGURATION" value="Development" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/VRTestProject.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="C:\App\Unreal\Versions\UE_5.6" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="1" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      </configuration_4>
-      <configuration_5 setup="1">
-        <option name="CONFIGURATION" value="Shipping" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/VRTestProject-Win64-Shipping.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="C:\App\Unreal\Versions\UE_5.6" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="1" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      </configuration_5>
-      <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
-      <option name="AUTO_SELECT_PRIORITY" value="10010" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
     <configuration default="true" type="XMakeRunConfiguration" factoryName="Start and Debug" show_console_on_std_err="false" show_console_on_std_out="false">
       <target name="runTarget" />
       <option name="allowRunningInParallel" value="false" />
@@ -181,6 +95,79 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="VRTestProject" type="Uproject" factoryName="rider.uproject">
+      <configuration_1 setup="1">
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/../../Versions/UE_5.6/Engine/Binaries/Win64/UnrealEditor-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Apps\Unreal\Projects\MiniProjetVR\VRTestProject.uproject&quot;" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Apps\Unreal\Versions\UE_5.6" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="1" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      </configuration_1>
+      <configuration_2 setup="1">
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/VRTestProject-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Apps\Unreal\Versions\UE_5.6" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="1" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      </configuration_2>
+      <configuration_3 setup="1">
+        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/../../Versions/UE_5.6/Engine/Binaries/Win64/UnrealEditor.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Apps\Unreal\Projects\MiniProjetVR\VRTestProject.uproject&quot;" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Apps\Unreal\Versions\UE_5.6" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="1" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      </configuration_3>
+      <configuration_4 setup="1">
+        <option name="CONFIGURATION" value="Development" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/VRTestProject.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Apps\Unreal\Versions\UE_5.6" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="1" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      </configuration_4>
+      <configuration_5 setup="1">
+        <option name="CONFIGURATION" value="Shipping" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/VRTestProject-Win64-Shipping.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Apps\Unreal\Versions\UE_5.6" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="1" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      </configuration_5>
+      <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/VRTestProject.uproject" />
+      <option name="AUTO_SELECT_PRIORITY" value="10010" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -196,6 +183,8 @@
       <workItem from="1767736532411" duration="5248000" />
       <workItem from="1767778503077" duration="3020000" />
       <workItem from="1767781576547" duration="2396000" />
+      <workItem from="1767861158610" duration="270000" />
+      <workItem from="1767861554944" duration="340000" />
     </task>
     <servers />
   </component>

@@ -43,6 +43,10 @@
 				"LinuxArm64",
 				"Android"
 			]
+		},
+		{
+			"Name": "MetaXRAudio",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
